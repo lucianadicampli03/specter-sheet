@@ -1,0 +1,12 @@
+{
+  "name": "Format on Commit",
+  "description": "Auto-format code before commits",
+  "trigger": {
+    "type": "pre-commit"
+  },
+  "action": {
+    "type": "command",
+    "command": "npm run lint"
+  },
+  "enabled": true
+}

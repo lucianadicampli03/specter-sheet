@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "SpecterSheet",
+    "description": "AI-powered spreadsheet with supernatural capabilities and ghostly UI",
+    "version": "1.0.0",
+    "category": "Costume Contest",
+    "hackathon": "Kiroween 2024"
+  },
+  "specs": {
+    "enabled": true,
+    "path": "./specs",
+    "files": [
+      "specter-sheet.md"
+    ]
+  },
+  "hooks": {
+    "enabled": true,
+    "path": "./hooks",
+    "files": [
+      "hooks.md"
+    ]
+  },
+  "steering": {
+    "enabled": true,
+    "path": "./steering",
+    "files": [
+      "coding-standards.md"
+    ]
+  },
+  "features": {
+    "vibeCode": true,
+    "specDriven": true,
+    "agentHooks": true,
+    "steeringDocs": true,
+    "mcp": false
+  },
+  "kiroUsage": {
+    "vibeCoding": [
+      "Component architecture discussions",
+      "Formula engine implementation",
+      "AI simulation logic",
+      "Animation effect generation"
+    ],
+    "specDriven": [
+      "Feature specification document",
+      "Component hierarchy definition",
+      "User flow documentation"
+    ],
+    "agentHooks": [
+      "Pre-commit validation",
+      "Component generation templates",
+      "Theme consistency checks"
+    ],
+    "steeringDocs": [
+      "Coding standards guide",
+      "Theme color guidelines",
+      "Naming conventions"
+    ]
+  }
+}
+
