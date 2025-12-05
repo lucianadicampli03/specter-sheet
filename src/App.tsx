@@ -622,10 +622,22 @@ function App() {
             darkMode={darkMode}
             onClose={() => setShowCreateModal(false)}
             onSelectTemplate={(template) => {
-              if (template === 'AI-Powered Budget') {
-                processAICommand('Make a monthly budget tracker');
-              }
               setShowCreateModal(false);
+              
+              // Each template triggers a specific AI command
+              const templateCommands: Record<string, string> = {
+                'Blank SpecterSheet': '', // Just close modal
+                'AI-Powered Budget': 'Create a monthly budget tracker with categories like Rent, Utilities, Food, Transport, Entertainment, Savings. Include amounts and a total formula.',
+                'Revenue Dashboard': 'Create a sales revenue dashboard with Products, Units Sold, Unit Price, and Total Revenue columns. Include 6 products and sum formulas.',
+                'Inventory Manager': 'Create an inventory tracker with Product Name, SKU, Quantity In Stock, Reorder Level, and Status columns. Add 5 sample products.',
+                'Team Planner': 'Create a team schedule planner with Team Member, Monday, Tuesday, Wednesday, Thursday, Friday columns. Add 4 team members with task assignments.',
+                'Project Timeline': 'Create a project timeline with Task Name, Start Date, End Date, Status, and Owner columns. Add 5 project tasks.',
+              };
+              
+              const command = templateCommands[template];
+              if (command) {
+                setTimeout(() => processAICommand(command), 300);
+              }
             }}
           />
         )}
